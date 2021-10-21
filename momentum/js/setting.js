@@ -1,6 +1,6 @@
 const setting = {
-    lang = `ru`,
-    photoSource = ``,
-    photoSourceTeg = ``,
-    isHideWeather = false,
+    lang: `ru`,
+    photoSource: ``,
+    photoSourceTeg: ``,
+    isHideWeather: false,
 }

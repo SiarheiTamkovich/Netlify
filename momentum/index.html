@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <title>momentum</title>
 </head>
-<body>
+<body id="body">
   <header class="header">
     <div class="player">
       <div class="player-controls">
@@ -32,14 +32,14 @@
   </header>
   <main class="main">
     <div class="slider-icons">
-      <button class="slide-prev slider-icon"></button>
-      <button class="slide-next slider-icon"></button>
+      <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
+      <button class="slide-next slider-icon" onclick="getSlideNext()"></button>
     </div>
     <time class="time"></time>
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" />
+      <input type="text" class="name" placeholder="[Enter name]"/>
     </div>
   </main>
   <footer class="footer">
@@ -50,7 +50,11 @@
     </div>
   </footer>
   <script src="js/setting.js"></script>
+<!-- --> 
+  <script src="js/time.js"></script>
+  <script src="js/slider.js"></script>
+<!-- 
   <script src="js/weather.js"></script>
-
+ --> 
 </body>
 </html>
