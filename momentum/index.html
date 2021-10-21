@@ -8,38 +8,38 @@
   <link rel="stylesheet" href="css/style.css" />
   <title>momentum</title>
 </head>
-<body>
+<body id="body">
   <header class="header">
     <div class="player">
       <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
+        <button class="play-prev player-icon">player-prev</button>
+        <button class="play player-icon">play</button>
+        <button class="play-next player-icon">play-next</button>
       </div>
       <ul class="play-list"></ul>
     </div>
     <div class="weather">
-      <input type="text" class="city" />
+      <input type="text" value="Minsk" class="city" />
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
         <span class="temperature">temperature</span>
-        <span class="weather-description"></span>
+        <span class="weather-description">weather-description</span>
       </div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
+      <div class="wind">wind</div>
+      <div class="humidity">humidity</div>
     </div>
   </header>
   <main class="main">
     <div class="slider-icons">
-      <button class="slide-prev slider-icon"></button>
-      <button class="slide-next slider-icon"></button>
+      <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
+      <button class="slide-next slider-icon" onclick="getSlideNext()"></button>
     </div>
     <time class="time"></time>
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" />
+      <input type="text" class="name" placeholder="[Enter name]"/>
     </div>
   </main>
   <footer class="footer">
@@ -49,6 +49,12 @@
       <div class="author"></div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/setting.js"></script>
+<!-- --> 
+  <script src="js/time.js"></script>
+  <script src="js/slider.js"></script>
+<!-- 
+  <script src="js/weather.js"></script>
+ --> 
 </body>
 </html>
