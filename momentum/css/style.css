@@ -102,14 +102,14 @@ body {
   transform: scale(1.1);
 }
 
-.play {
+.play_main {
   width: 40px;
   height: 40px;
   background-size: 40px 40px;
   background-image: url("../assets/svg/play.svg");
 }
 
-.pause {
+.pause_main {
   background-image: url("../assets/svg/pause.svg");
 }
 
@@ -212,7 +212,7 @@ body {
   background-image: url("../assets/svg/slider-next.svg");
 }
 
-.time {
+.curenttime {
   min-height: 124px;
   margin-bottom: 10px;
   font-family: 'Arial-MT';
@@ -284,7 +284,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .time {
+  .curenttime {
     min-height: 80px;
     font-size: 72px;    
   }

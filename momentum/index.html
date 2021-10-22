@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/icono.min.css">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/player.css" />
   <title>momentum</title>
 </head>
 <body id="body">
@@ -13,22 +15,36 @@
     <div class="player">
       <div class="player-controls">
         <button class="play-prev player-icon" onclick="playPrev()"></button>
-        <button class="play player-icon" id="button" onclick="playAudio()"></button>
+        <button class="play_main player-icon" id="button" onclick="playAudio()"></button>
         <button class="play-next player-icon" onclick="playNext()"></button>
       </div>
-      <div class="playar-bar">
-        <div>trec name</div>
-        <div>time</div>
-        <div>Progress</div>
-        <div>Volume</div>
-        <button>Volume btn<button>
+      <div class="treckname">&nbsp;</div>
+      <div class="audio-player">
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <div class="controls">
+          <div class="play-container">
+            <div class="toggle-play play">
+          </div>
+          </div>
+          <div class="time">
+            <div class="current">00:00</div>
+            <div class="divider">/</div>
+            <div class="length">00:00</div>
+          </div>
+          
+          <div class="volume-container">
+            <div class="volume-button">
+              <div class="volume icono-volumeMedium"></div>
+            </div>
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="play-list">
-        <li class="play-item">Aqua Caelestis</li>
-        <li class="play-item">River Flows In You</li>
-        <li class="play-item">Summer Wind</li>
-        <li class="play-item">Ennio Morricone</li>
-      </ul>
+      <ul class="play-list"></ul>
     </div>
     <div class="weather">
       <input type="text" value="Minsk" class="city" />
@@ -47,7 +63,7 @@
       <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
       <button class="slide-next slider-icon" onclick="getSlideNext()"></button>
     </div>
-    <time class="time"></time>
+    <time class="curenttime"></time>
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>

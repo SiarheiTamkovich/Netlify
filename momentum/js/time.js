@@ -1,4 +1,4 @@
-const timeDom = document.querySelector('.time');
+const timeDom = document.querySelector('.curenttime');
 const dateDom = document.querySelector(`.date`);
 const greeting = document.querySelector(`.greeting`);
 const name = document.querySelector(`.name`);
