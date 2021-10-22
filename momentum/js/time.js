@@ -26,7 +26,7 @@ function setDateRu() {
 function getTimeOfDayRu(){
     const date = new Date();
     const hours = date.getHours();
-    if (hours > 0 && hours <= 6) {
+    if (hours >= 0 && hours <= 6) {
        greeting.innerText = `Доброй ночи,`
     } else if (hours > 6 && hours <= 12) {
        greeting.innerText = `Доброе утро,`

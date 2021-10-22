@@ -1,4 +1,4 @@
-let rNom = getRandomNum(1, 20)
+let rNom = getRandomNum(0, 20)
 setBg();
 
 function setBg() {
@@ -10,7 +10,7 @@ function setBg() {
     rNomStr = rNomStr.padStart(2, "0"); 
 
     //   console.log(rNom);
-    if (hours > 0 && hours <= 6) { // night
+    if (hours >= 0 && hours <= 6) { // night
         img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/` + rNomStr + `.jpg`;
         img.addEventListener('load', function (e) {
              body.style.backgroundImage = `url(` + img.src + `)`;
