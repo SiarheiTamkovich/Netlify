@@ -12,11 +12,23 @@
   <header class="header">
     <div class="player">
       <div class="player-controls">
-        <button class="play-prev player-icon">player-prev</button>
-        <button class="play player-icon">play</button>
-        <button class="play-next player-icon">play-next</button>
+        <button class="play-prev player-icon" onclick="playPrev()"></button>
+        <button class="play player-icon" id="button" onclick="playAudio()"></button>
+        <button class="play-next player-icon" onclick="playNext()"></button>
       </div>
-      <ul class="play-list"></ul>
+      <div class="playar-bar">
+        <div>trec name</div>
+        <div>time</div>
+        <div>Progress</div>
+        <div>Volume</div>
+        <button>Volume btn<button>
+      </div>
+      <ul class="play-list">
+        <li class="play-item">Aqua Caelestis</li>
+        <li class="play-item">River Flows In You</li>
+        <li class="play-item">Summer Wind</li>
+        <li class="play-item">Ennio Morricone</li>
+      </ul>
     </div>
     <div class="weather">
       <input type="text" value="Minsk" class="city" />
@@ -55,6 +67,8 @@
   <script src="js/slider.js"></script>
 <!-- 
   <script src="js/weather.js"></script>
- --> 
+ -->
+ <script src="js/playList.js"></script>
+ <script src="js/audio.js"></script>
 </body>
 </html>
