@@ -33,7 +33,6 @@
             <div class="divider">/</div>
             <div class="length">00:00</div>
           </div>
-          
           <div class="volume-container">
             <div class="volume-button">
               <div class="volume icono-volumeMedium"></div>
@@ -46,6 +45,20 @@
       </div>
       <ul class="play-list"></ul>
     </div>
+    <div class="setting-btn"></div>
+    <div class="setting">
+      <span class="lang-select" id="lang">Язык:</span>
+      <select type="select" class="select-lang">
+        <option value="ru">RU</option>
+        <option value="en">EN</option> 
+      </select>
+      <span class="pict-select" id="pictsel">&nbsp;Фото из:</span>
+      <select type="unsplash" class="select-unsplash">
+        <option value="github">&nbsp;Github</option>
+        <option value="unsplash">Unsplash</option> 
+      </select>
+    </div>
+    <a href="https://siarheitamkovich.github.io/Siarhei_Tamkovich_Step_21/Todolist/" class="todolist"  target="_blank" id="todolist" >Список задач</a>
     <div class="weather">
       <input type="text" value="Minsk" class="city" />
       <i class="weather-icon owf"></i>
@@ -57,7 +70,7 @@
       <div class="wind">wind</div>
       <div class="humidity">humidity</div>
     </div>
-  </header>
+    </header>
   <main class="main">
     <div class="slider-icons">
       <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
@@ -88,6 +101,6 @@
  <script src="js/playList.js"></script>
  <script src="js/audio.js"></script>
  <script src="js/quote.js"></script>
- <script src="js/unspash.js"></script>
+ <script src="js/unsplash.js"></script>
 </body>
 </html>

@@ -283,6 +283,43 @@ body {
   min-height: 20px;
 }
 
+.select-lang,
+.select-unsplash {
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.select-lang:hover,
+.select-unsplash:hover {
+  color: #C5B358;
+}
+
+option {
+  color: #fff;
+  background-color:#C5B358;
+}
+
+.todolist {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.todolist:hover {
+  color: #C5B358;
+  opacity: 1;
+}
+
+.lang-select,
+.pict-select {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .curenttime {
     min-height: 80px;
