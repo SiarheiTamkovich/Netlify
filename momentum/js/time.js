@@ -70,6 +70,7 @@ if (setting.lang === `ru`) {
 
 function setLocalStorage() {
     localStorage.setItem('name', name.value);
+    setting.name = name.value;
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
