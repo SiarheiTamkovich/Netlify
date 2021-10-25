@@ -102,14 +102,14 @@ body {
   transform: scale(1.1);
 }
 
-.play {
+.play_main {
   width: 40px;
   height: 40px;
   background-size: 40px 40px;
   background-image: url("../assets/svg/play.svg");
 }
 
-.pause {
+.pause_main {
   background-image: url("../assets/svg/pause.svg");
 }
 
@@ -212,7 +212,7 @@ body {
   background-image: url("../assets/svg/slider-next.svg");
 }
 
-.time {
+.curenttime {
   min-height: 124px;
   margin-bottom: 10px;
   font-family: 'Arial-MT';
@@ -232,7 +232,7 @@ body {
   justify-content: stretch;
   align-items: center;
   min-height: 48px;
-  width: 100vw;
+  width: 90%;
   font-size: 40px;
 }
 
@@ -283,8 +283,45 @@ body {
   min-height: 20px;
 }
 
+.select-lang,
+.select-unsplash {
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.select-lang:hover,
+.select-unsplash:hover {
+  color: #C5B358;
+}
+
+option {
+  color: #fff;
+  background-color:#C5B358;
+}
+
+.todolist {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.todolist:hover {
+  color: #C5B358;
+  opacity: 1;
+}
+
+.lang-select,
+.pict-select {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
-  .time {
+  .curenttime {
     min-height: 80px;
     font-size: 72px;    
   }

@@ -1,5 +1,14 @@
-let rNom = getRandomNum(1, 20)
-setBg();
+let rNom = getRandomNum(0, 20)
+setBgWhithUnsplush();
+
+function setBgWhithUnsplush() {
+    if (setting.photoSource === `unsplash`) {
+        setBgUnslash();
+    } else if (setting.photoSource === `github`) {
+        setBg();
+     }
+}
+
 
 function setBg() {
     const date = new Date();
@@ -10,7 +19,7 @@ function setBg() {
     rNomStr = rNomStr.padStart(2, "0"); 
 
     //   console.log(rNom);
-    if (hours > 0 && hours <= 6) { // night
+    if (hours >= 0 && hours <= 6) { // night
         img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/` + rNomStr + `.jpg`;
         img.addEventListener('load', function (e) {
              body.style.backgroundImage = `url(` + img.src + `)`;
@@ -33,6 +42,17 @@ function setBg() {
     }
 }
 
+function setBgUnslash() {
+    const date = new Date();
+    const img = new Image();
+    const hours = date.getHours();
+          
+    img.src = `${arrPict.results[rNom].urls.regular}`;
+    img.addEventListener('load', function (e) {
+    body.style.backgroundImage = `url(` + img.src + `)`;
+    });
+}
+
 function getRandomNum(min, max){
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -40,10 +60,10 @@ function getRandomNum(min, max){
 function getSlideNext(){
 //    console.log(rNom);
     if (rNom < 20) {
-        setBg();
+        setBgWhithUnsplush();
         rNom++;
     } else {
-        setBg();
+        setBgWhithUnsplush();
         rNom = 1;
     }
 }
@@ -51,10 +71,10 @@ function getSlideNext(){
 function getSlidePrev(){
 //    console.log(rNom);
     if (rNom > 1) {
-        setBg();
+        setBgWhithUnsplush();
         rNom--;
     } else {
-        setBg();
+        setBgWhithUnsplush();
         rNom = 20;
     }
 }

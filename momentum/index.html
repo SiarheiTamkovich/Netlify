@@ -5,45 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/icono.min.css">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/player.css" />
   <title>momentum</title>
 </head>
 <body id="body">
   <header class="header">
     <div class="player">
       <div class="player-controls">
-        <button class="play-prev player-icon">player-prev</button>
-        <button class="play player-icon">play</button>
-        <button class="play-next player-icon">play-next</button>
+        <button class="play-prev player-icon" onclick="playPrev()"></button>
+        <button class="play_main player-icon" id="button" onclick="playAudio()"></button>
+        <button class="play-next player-icon" onclick="playNext()"></button>
+      </div>
+      <div class="treckname">&nbsp;</div>
+      <div class="audio-player">
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+        <div class="controls">
+          <div class="play-container">
+            <div class="toggle-play play">
+          </div>
+          </div>
+          <div class="time">
+            <div class="current">00:00</div>
+            <div class="divider">/</div>
+            <div class="length">00:00</div>
+          </div>
+          <div class="volume-container">
+            <div class="volume-button">
+              <div class="volume icono-volumeMedium"></div>
+            </div>
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <ul class="play-list"></ul>
     </div>
+    <div class="setting-btn"></div>
+    <div class="setting">
+      <span class="lang-select" id="lang">Язык:</span>
+      <select type="select" class="select-lang">
+        <option value="ru">RU</option>
+        <option value="en" >EN</option> 
+      </select>
+      <span class="pict-select" id="pictsel">&nbsp;Фото из:</span>
+      <select type="unsplash" class="select-unsplash" id="selectpict">
+        <option value="github">&nbsp;Github</option>
+        <option value="unsplash">Unsplash</option> 
+      </select>
+    </div>
+    <a href="https://siarheitamkovich.github.io/Siarhei_Tamkovich_Step_21/Todolist/" class="todolist"  target="_blank" id="todolist" >Список задач</a>
     <div class="weather">
-      <input type="text" value="Minsk" class="city" />
+      <input type="text" value="Минск" class="city" />
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
-        <span class="temperature">temperature</span>
-        <span class="weather-description">weather-description</span>
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
       </div>
-      <div class="wind">wind</div>
-      <div class="humidity">humidity</div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
     </div>
-  </header>
+    </header>
   <main class="main">
     <div class="slider-icons">
       <button class="slide-prev slider-icon" onclick="getSlidePrev()"></button>
       <button class="slide-next slider-icon" onclick="getSlideNext()"></button>
     </div>
-    <time class="time"></time>
+    <time class="curenttime"></time>
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" placeholder="[Enter name]"/>
+      <input type="text" class="name" placeholder="[Enter name]" id="username"/>
     </div>
   </main>
   <footer class="footer">
-    <button class="change-quote"></button>
+    <button class="change-quote" onclick="getQuotes()"></button>
     <div>
       <div class="quote"></div>
       <div class="author"></div>
@@ -53,8 +94,11 @@
 <!-- --> 
   <script src="js/time.js"></script>
   <script src="js/slider.js"></script>
-<!-- 
-  <script src="js/weather.js"></script>
- --> 
+<!---->
+<script src="js/weather.js"></script>
+ <script src="js/playList.js"></script>
+ <script src="js/audio.js"></script>
+ <script src="js/quote.js"></script>
+ <script src="js/unsplash.js"></script>
 </body>
 </html>
