@@ -2,7 +2,7 @@ const selectlang = document.querySelector(`.select-lang`)
 let setting = {
     lang: `ru`,
     name: ``,
-    photoSource: ``,
+    photoSource: `github`,
     photoSourceTeg: ``,
     isHideWeather: false,
 }
@@ -32,6 +32,8 @@ function setLang() {
 }
 
 function setParam() {
+    username.value = setting.name;
+    
     if (setting.lang === `ru`) {
         selectlang.value = setting.lang;
         getWeather();
@@ -48,6 +50,12 @@ function setParam() {
         lang.innerText = `Language:`;
         pictsel.innerText = `Photo from:`;
         getQuotesEn();
+    }
+
+    if (setting.photoSource === `github` ) {
+        unsplushBtn.value = setting.photoSource;
+       } else if (setting.photoSource === `unsplash`) {
+        unsplushBtn.value = setting.photoSource;
     }
 }
 
